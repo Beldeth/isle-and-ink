@@ -213,11 +213,12 @@ nav {
   align-items: center; justify-content: center;
 }
 .hero-float-card {
-  position: absolute; bottom: 2.5rem; left: -2.5rem;
+  position: absolute; bottom: 2.5rem; left: 1.5rem;
   background: var(--cream); border-radius: 1rem;
   padding: 1.2rem 1.5rem;
   box-shadow: 0 20px 60px rgba(26,39,68,0.18);
   width: 210px;
+  z-index: 2;
   animation: floatCard 4s ease-in-out infinite;
 }
 @keyframes floatCard {
@@ -912,7 +913,7 @@ footer {
   <section class="hero">
     <div class="hero-left">
       <p class="hero-eyebrow">Pennyghael, Isle of Mull</p>
-      <h1 class="hero-h1">Wild prints<br><em>from the edge</em><br>of Scotland</h1>
+      <h1 class="hero-h1">Wild prints<br><em>from the edge</em> of Scotland</h1>
       <p class="hero-body">Hand-carved and hand-pulled in a studio on the Isle of Mull. Each print captures a real moment — an otter at the waterline, a stag on the ridge, a bay shimmering in the late light.</p>
       <div class="hero-ctas">
         <a href="#" class="btn-primary" onclick="showPage('shop')">Shop Prints</a>
@@ -925,11 +926,11 @@ footer {
     </div>
     <div class="hero-right">
       <div class="hero-landscape" style="background:#1a2744; position:relative; overflow:hidden;">
-        <img src="https://lh3.googleusercontent.com/d/1cwUEC3A2OPAbuq1iQ52DVj3qJS6nja50" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt="Calgary Bay framed print">
+        <img src="images/ardalanish2.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" alt="Ardalanish Bay linocut print">
         <div class="hero-float-card">
           <p class="float-label">Limited Edition</p>
-          <p class="float-title">Calgary · Ed. of 15</p>
-          <p class="float-price">£120 · A3 Linocut Reduction</p>
+          <p class="float-title">Ardalanish · A3</p>
+          <p class="float-price">£120 · Linocut Reduction</p>
         </div>
       </div>
     </div>
@@ -967,40 +968,39 @@ footer {
       <a href="#" class="view-all" onclick="showPage('shop')">View all prints</a>
     </div>
     <div class="prints-grid">
-      <div class="print-card tall reveal" onclick="showPage('product')">
-        <img src="https://lh3.googleusercontent.com/d/1OQvcJ3IJIG_FM-9m8hGBQov3Zeg_2Dz9" class="print-thumb" style="min-height:540px; width:100%; display:block; object-fit:cover;" alt="Calgary Bay linocut print">
+      <div class="print-card tall reveal" onclick="showPage('shop')">
+        <img src="images/burrow1.jpg" class="print-thumb" style="min-height:540px; width:100%; display:block; object-fit:cover;" alt="Burrow linocut print">
         <div class="print-overlay">
-          <p class="print-name">Calgary</p>
-          <div class="print-meta"><span class="print-ed">Limited · Ed. of 15 · A3</span><span class="print-price">£120</span></div>
+          <p class="print-name">Burrow</p>
+          <div class="print-meta"><span class="print-ed">Open Ed. · A3</span><span class="print-price">£48</span></div>
         </div>
-        <span class="badge">Limited Ed.</span>
       </div>
-      <div class="print-card reveal d1" onclick="showPage('product')">
-        <img src="https://lh3.googleusercontent.com/d/1jGdKVt-LXghLLE-3p3ue6YM-qqJ1jGXs" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Stag linocut print">
+      <div class="print-card reveal d1" onclick="showPage('shop')">
+        <img src="images/closeup2.jpg" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Calgary Bay close up detail">
         <div class="print-overlay">
-          <p class="print-name">Stag — Colour</p>
+          <p class="print-name">Calgary — Detail</p>
+          <div class="print-meta"><span class="print-ed">Limited · Ed. of 15</span><span class="print-price">£120</span></div>
+        </div>
+      </div>
+      <div class="print-card reveal d2" onclick="showPage('shop')">
+        <img src="images/otter-closeup.jpg" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Otter close up linocut print">
+        <div class="print-overlay">
+          <p class="print-name">Otter — Close Up</p>
           <div class="print-meta"><span class="print-ed">Open Ed.</span><span class="print-price">£20</span></div>
         </div>
       </div>
-      <div class="print-card reveal d2" onclick="showPage('product')">
-        <img src="https://lh3.googleusercontent.com/d/1Rbswna7_aUKsfwo4C8VzmmN-NlmNkru-" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Otter linocut print">
+      <div class="print-card reveal d3" onclick="showPage('shop')">
+        <img src="images/spring-on-iona4.png" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Spring on Iona linocut print">
         <div class="print-overlay">
-          <p class="print-name">Eagle — Colour</p>
+          <p class="print-name">Spring on Iona</p>
           <div class="print-meta"><span class="print-ed">Open Ed.</span><span class="print-price">£20</span></div>
         </div>
       </div>
-      <div class="print-card reveal d3" onclick="showPage('product')">
-        <img src="https://lh3.googleusercontent.com/d/1uf6K5U5VW8I_ylno2-BUMeZEPNgYxVqA" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Burrow linocut print">
+      <div class="print-card reveal d4" onclick="showPage('shop')">
+        <img src="images/seaweed-otter.png" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Seaweed Otter linocut print">
         <div class="print-overlay">
-          <p class="print-name">Windswept</p>
-          <div class="print-meta"><span class="print-ed">Open Ed.</span><span class="print-price">£48</span></div>
-        </div>
-      </div>
-      <div class="print-card reveal d4" onclick="showPage('product')">
-        <img src="https://lh3.googleusercontent.com/d/1-E6cs3aD8RMLg2Q1iQQt3Xox2mMrWVOw" class="print-thumb" style="aspect-ratio:4/3;width:100%;display:block;object-fit:cover;" alt="Ardalanish linocut print">
-        <div class="print-overlay">
-          <p class="print-name">Ardalanish</p>
-          <div class="print-meta"><span class="print-ed">Limited Ed.</span><span class="print-price">£120</span></div>
+          <p class="print-name">Seaweed Otter</p>
+          <div class="print-meta"><span class="print-ed">Open Ed.</span><span class="print-price">£20</span></div>
         </div>
       </div>
     </div>
@@ -1119,37 +1119,45 @@ footer {
   <div class="shop-section">
     <h2 class="shop-section-title">Original <em>Prints</em></h2>
     <div class="shop-grid">
-      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'calgary')">
-        <img src="https://lh3.googleusercontent.com/d/1OQvcJ3IJIG_FM-9m8hGBQov3Zeg_2Dz9" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Calgary">
-        <div class="shop-card-body"><p class="shop-card-name">Calgary</p><p class="shop-card-sub">Linocut Reduction · Limited Ed. of 15 · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="calgary" data-item-name="Calgary" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition of 15 · A3" data-item-image="https://lh3.googleusercontent.com/d/1OQvcJ3IJIG_FM-9m8hGBQov3Zeg_2Dz9" data-item-max-quantity="15">+</button></div></div>
+      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'ardalanish')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/ardalanish.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Ardalanish"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Ardalanish</p><p class="shop-card-sub">Linocut Reduction · Limited Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="ardalanish" data-item-name="Ardalanish" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition · A3" data-item-image="images/ardalanish.jpg">+</button></div></div>
+      </div>
+      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'afternoon-nap')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/afternoon-nap.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Afternoon Nap"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Afternoon Nap</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="afternoon-nap" data-item-name="Afternoon Nap" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/afternoon-nap.png">+</button></div></div>
+      </div>
+      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'burrow')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/burrow.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Burrow"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Burrow</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="burrow" data-item-name="Burrow" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/burrow.jpg">+</button></div></div>
+      </div>
+      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'calgary')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/calgary.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Calgary Bay"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Calgary Bay</p><p class="shop-card-sub">Linocut Reduction · Limited Ed. of 15 · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="calgary" data-item-name="Calgary Bay" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition of 15 · A3" data-item-image="images/calgary.jpg" data-item-max-quantity="15">+</button></div></div>
+      </div>
+      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'hebridean-dreams')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/hebridean-dreams.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;" alt="Hebridean Dreams"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Hebridean Dreams</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="hebridean-dreams" data-item-name="Hebridean Dreams" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/hebridean-dreams.png">+</button></div></div>
+      </div>
+      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'nestled')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/nestled.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Nestled"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Nestled</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="nestled" data-item-name="Nestled" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/nestled.jpg">+</button></div></div>
+      </div>
+      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'spring-on-iona')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/spring-on-iona.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Spring on Iona"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Spring on Iona</p><p class="shop-card-sub">Linocut Reduction · Limited Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="spring-on-iona" data-item-name="Spring on Iona" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition · A3" data-item-image="images/spring-on-iona.png">+</button></div></div>
+      </div>
+      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'taking-a-dip')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/taking-a-dip.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Taking a Dip"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Taking a Dip</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="taking-a-dip" data-item-name="Taking a Dip" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/taking-a-dip.png">+</button></div></div>
+      </div>
+      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'tangled')">
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/tangled.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Tangled"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Tangled</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="tangled" data-item-name="Tangled" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/tangled.jpg">+</button></div></div>
       </div>
       <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'windswept')">
-        <img src="https://lh3.googleusercontent.com/d/1uf6K5U5VW8I_ylno2-BUMeZEPNgYxVqA" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Burrow">
-        <div class="shop-card-body"><p class="shop-card-name">Windswept</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="windswept" data-item-name="Windswept" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="https://lh3.googleusercontent.com/d/1uf6K5U5VW8I_ylno2-BUMeZEPNgYxVqA">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'stag-colour')">
-        <img src="https://lh3.googleusercontent.com/d/1jGdKVt-LXghLLE-3p3ue6YM-qqJ1jGXs" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="4x4 prints">
-        <div class="shop-card-body"><p class="shop-card-name">Stag — Colour</p><p class="shop-card-sub">Linocut · Open Edition · 4×4"</p><div class="shop-card-footer"><p class="shop-card-price">£20</p><button class="shop-card-add snipcart-add-item" data-item-id="stag-colour" data-item-name="Stag — Colour" data-item-price="20" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · 4×4&quot;" data-item-image="https://lh3.googleusercontent.com/d/1jGdKVt-LXghLLE-3p3ue6YM-qqJ1jGXs">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'eagle-colour')">
-        <img src="https://lh3.googleusercontent.com/d/17ENkKuOtKhLTACtP4ncK3PwAu_bbXHi-" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Afternoon Nap">
-        <div class="shop-card-body"><p class="shop-card-name">Eagle — Colour</p><p class="shop-card-sub">Linocut · Open Edition · 4×4"</p><div class="shop-card-footer"><p class="shop-card-price">£20</p><button class="shop-card-add snipcart-add-item" data-item-id="eagle-colour" data-item-name="Eagle — Colour" data-item-price="20" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · 4×4&quot;" data-item-image="https://lh3.googleusercontent.com/d/17ENkKuOtKhLTACtP4ncK3PwAu_bbXHi-">+</button></div></div>
-      </div>
-      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'ardalanish')">
-        <img src="https://lh3.googleusercontent.com/d/1-E6cs3aD8RMLg2Q1iQQt3Xox2mMrWVOw" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Ardalanish">
-        <div class="shop-card-body"><p class="shop-card-name">Ardalanish</p><p class="shop-card-sub">Linocut Reduction · Limited Ed. · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="ardalanish" data-item-name="Ardalanish" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition · A3" data-item-image="https://lh3.googleusercontent.com/d/1-E6cs3aD8RMLg2Q1iQQt3Xox2mMrWVOw">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'lookout-teal')">
-        <img src="https://lh3.googleusercontent.com/d/1Kz9YRAs7oDYcJhpCX7xbNa9rVEVkR_77" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Otter print">
-        <div class="shop-card-body"><p class="shop-card-name">Lookout — Teal</p><p class="shop-card-sub">Linocut · Open Edition · 4×4"</p><div class="shop-card-footer"><p class="shop-card-price">£20</p><button class="shop-card-add snipcart-add-item" data-item-id="lookout-teal" data-item-name="Lookout — Teal" data-item-price="20" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · 4×4&quot;" data-item-image="https://lh3.googleusercontent.com/d/1Kz9YRAs7oDYcJhpCX7xbNa9rVEVkR_77">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'staffa-colour')">
-        <img src="https://lh3.googleusercontent.com/d/1n-ATCREaPrJxsJg5e5Lq03Yupk0YDWVj" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Pennyghael Coos">
-        <div class="shop-card-body"><p class="shop-card-name">Staffa — Colour</p><p class="shop-card-sub">Linocut · Open Edition · 4×4"</p><div class="shop-card-footer"><p class="shop-card-price">£20</p><button class="shop-card-add snipcart-add-item" data-item-id="staffa-colour" data-item-name="Staffa — Colour" data-item-price="20" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · 4×4&quot;" data-item-image="https://lh3.googleusercontent.com/d/1n-ATCREaPrJxsJg5e5Lq03Yupk0YDWVj">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'highland-coo-colour')">
-        <img src="https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ" class="shop-card-img" style="aspect-ratio:1;display:block;object-fit:cover;" alt="Iona Beach">
-        <div class="shop-card-body"><p class="shop-card-name">Highland Coo — Colour</p><p class="shop-card-sub">Linocut · Open Edition · 4×4"</p><div class="shop-card-footer"><p class="shop-card-price">£20</p><button class="shop-card-add snipcart-add-item" data-item-id="highland-coo-colour" data-item-name="Highland Coo — Colour" data-item-price="20" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · 4×4&quot;" data-item-image="https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ">+</button></div></div>
+        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/windswept.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Windswept"></div>
+        <div class="shop-card-body"><p class="shop-card-name">Windswept</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="windswept" data-item-name="Windswept" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/windswept.jpg">+</button></div></div>
       </div>
     </div>
   </div>
@@ -1162,7 +1170,7 @@ footer {
       <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'card-sunset-puffins')"><img src="https://lh3.googleusercontent.com/d/1YCCJcOjxvlDVJJQ_frjcMPfExsjQD53j" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Sunset Puffins card"><div class="shop-card-body"><p class="shop-card-name">Sunset Puffins</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-sunset-puffins" data-item-name="Sunset Puffins" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1YCCJcOjxvlDVJJQ_frjcMPfExsjQD53j">+</button></div></div></div>
       <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'card-celebration-puffin')"><img src="https://lh3.googleusercontent.com/d/1z89bnOJXJ2V1ocsGfzz0yoIBqa6uXGyQ" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Celebration Puffin card"><div class="shop-card-body"><p class="shop-card-name">Celebration Puffin</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-celebration-puffin" data-item-name="Celebration Puffin" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1z89bnOJXJ2V1ocsGfzz0yoIBqa6uXGyQ">+</button></div></div></div>
       <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'card-ardalanish')"><img src="https://lh3.googleusercontent.com/d/1QjBj73OR0259Ur5zyVHAIOh-HLqB4dZu" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Ardalanish card"><div class="shop-card-body"><p class="shop-card-name">Ardalanish</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-ardalanish" data-item-name="Ardalanish (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1QjBj73OR0259Ur5zyVHAIOh-HLqB4dZu">+</button></div></div></div>
-      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'card-ionas-beach')"><img src="https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Iona Beach card"><div class="shop-card-body"><p class="shop-card-name">Iona's Beach</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-ionas-beach" data-item-name="Iona's Beach (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ">+</button></div></div></div>
+      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'card-ionas-beach')"><img src="images/iona-beach-card.png" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Iona Beach card"><div class="shop-card-body"><p class="shop-card-name">Iona's Beach</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-ionas-beach" data-item-name="Iona's Beach (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ">+</button></div></div></div>
       <div class="shop-card reveal d4" onclick="if(!event.target.closest('button')) showPage('product', 'card-treshnish-puffins')"><img src="https://lh3.googleusercontent.com/d/1cKVgUecvDTsEqPckxBo7uJViRpzHz9hB" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Puffins card"><div class="shop-card-body"><p class="shop-card-name">Treshnish Puffins</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-treshnish-puffins" data-item-name="Treshnish Puffins (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1cKVgUecvDTsEqPckxBo7uJViRpzHz9hB">+</button></div></div></div>
     </div>
   </div>
@@ -1255,7 +1263,7 @@ footer {
 <div class="page" id="page-about">
   <section class="about-hero">
     <div class="about-hero-img" style="background:#1a2744; padding:0; overflow:hidden; position:relative;">
-      <img src="https://lh3.googleusercontent.com/d/1AWdj05ebRBjzdAOM2FhGr5ytEuAyZpaP" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" alt="Eden Reeve on Mull">
+      <img src="images/eden3.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" alt="Eden Reeve on Mull">
       <span class="eden-img-cap" style="position:relative;z-index:2;">Eden on Calgary Bay</span>
     </div>
     <div class="about-hero-content reveal">
@@ -1431,8 +1439,47 @@ footer {
 <script>
 // ─── Product catalogue ───────────────────────────────────────────────────────
 const PRODUCTS = {
+  'ardalanish': {
+    name: 'Ardalanish',
+    eyebrow: 'Limited Edition · Isle of Mull',
+    price: 120,
+    desc: "A linocut reduction print of Ardalanish Bay — one of Mull's most remote and beautiful beaches.",
+    specs: [
+      { key: 'Edition',    val: 'Limited Edition' },
+      { key: 'Print type', val: 'Linocut Reduction' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/ardalanish.jpg'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
+  'afternoon-nap': {
+    name: 'Afternoon Nap',
+    eyebrow: 'Open Edition · Isle of Mull',
+    price: 48,
+    desc: 'A peaceful linocut of an otter dozing on the rocks — a quiet moment on the Mull shoreline.',
+    specs: [
+      { key: 'Edition',    val: 'Open Edition' },
+      { key: 'Print type', val: 'Linocut' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/afternoon-nap.png'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
+  'burrow': {
+    name: 'Burrow',
+    eyebrow: 'Open Edition · Isle of Mull',
+    price: 48,
+    desc: 'A linocut print of a puffin peering out from its burrow on the Treshnish Isles.',
+    specs: [
+      { key: 'Edition',    val: 'Open Edition' },
+      { key: 'Print type', val: 'Linocut' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/burrow.jpg'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
   'calgary': {
-    name: 'Calgary',
+    name: 'Calgary Bay',
     eyebrow: 'Limited Edition · Isle of Mull',
     price: 120,
     desc: 'A stylised linocut reduction print of Calgary Bay on the Isle of Mull. This piece holds the memory of sea air, shifting tides, and long days in one of my favourite places.',
@@ -1444,12 +1491,73 @@ const PRODUCTS = {
       { key: 'Paper',      val: 'Hosho' },
       { key: 'Ink',        val: 'Cranfield Caligo' }
     ],
-    images: [
-      'https://lh3.googleusercontent.com/d/1OQvcJ3IJIG_FM-9m8hGBQov3Zeg_2Dz9',
-      'https://lh3.googleusercontent.com/d/1jZwgxUMIm6EIPBj_UlymsOZiUn7xcmyk',
-      'https://lh3.googleusercontent.com/d/1cwUEC3A2OPAbuq1iQ52DVj3qJS6nja50'
-    ],
+    images: ['images/calgary.jpg'],
     maxQty: 15, showFraming: true, category: 'print'
+  },
+  'hebridean-dreams': {
+    name: 'Hebridean Dreams',
+    eyebrow: 'Open Edition · Isle of Mull',
+    price: 48,
+    desc: 'A dreamy linocut of an otter gliding through the teal waters of the Hebrides.',
+    specs: [
+      { key: 'Edition',    val: 'Open Edition' },
+      { key: 'Print type', val: 'Linocut' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/hebridean-dreams.png'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
+  'nestled': {
+    name: 'Nestled',
+    eyebrow: 'Open Edition · Isle of Mull',
+    price: 48,
+    desc: 'A tender linocut of otters nestled together — a quiet scene from the Mull coastline.',
+    specs: [
+      { key: 'Edition',    val: 'Open Edition' },
+      { key: 'Print type', val: 'Linocut' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/nestled.jpg'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
+  'spring-on-iona': {
+    name: 'Spring on Iona',
+    eyebrow: 'Limited Edition · Isle of Mull',
+    price: 120,
+    desc: 'A vibrant linocut reduction print capturing the colours of spring on the Isle of Iona.',
+    specs: [
+      { key: 'Edition',    val: 'Limited Edition' },
+      { key: 'Print type', val: 'Linocut Reduction' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/spring-on-iona.png'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
+  'taking-a-dip': {
+    name: 'Taking a Dip',
+    eyebrow: 'Open Edition · Isle of Mull',
+    price: 48,
+    desc: 'A playful linocut of an otter taking a dip in the clear waters around Mull.',
+    specs: [
+      { key: 'Edition',    val: 'Open Edition' },
+      { key: 'Print type', val: 'Linocut' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/taking-a-dip.png'],
+    maxQty: null, showFraming: true, category: 'print'
+  },
+  'tangled': {
+    name: 'Tangled',
+    eyebrow: 'Open Edition · Isle of Mull',
+    price: 48,
+    desc: 'A charming linocut of an otter tangled in seaweed — a familiar sight on the shores of Mull.',
+    specs: [
+      { key: 'Edition',    val: 'Open Edition' },
+      { key: 'Print type', val: 'Linocut' },
+      { key: 'Print size', val: 'A3 (297 × 420mm)' }
+    ],
+    images: ['images/tangled.jpg'],
+    maxQty: null, showFraming: true, category: 'print'
   },
   'windswept': {
     name: 'Windswept',
@@ -1461,85 +1569,7 @@ const PRODUCTS = {
       { key: 'Print type', val: 'Linocut' },
       { key: 'Print size', val: 'A3 (297 × 420mm)' }
     ],
-    images: ['https://lh3.googleusercontent.com/d/1uf6K5U5VW8I_ylno2-BUMeZEPNgYxVqA'],
-    maxQty: null, showFraming: true, category: 'print'
-  },
-  'stag-colour': {
-    name: 'Stag — Colour',
-    eyebrow: 'Open Edition · Isle of Mull',
-    price: 20,
-    desc: 'A hand-pulled linocut of a Highland stag, printed in rich colour on quality paper.',
-    specs: [
-      { key: 'Edition',    val: 'Open Edition' },
-      { key: 'Print type', val: 'Linocut' },
-      { key: 'Print size', val: '4 × 4"' }
-    ],
-    images: ['https://lh3.googleusercontent.com/d/1jGdKVt-LXghLLE-3p3ue6YM-qqJ1jGXs'],
-    maxQty: null, showFraming: true, category: 'print'
-  },
-  'eagle-colour': {
-    name: 'Eagle — Colour',
-    eyebrow: 'Open Edition · Isle of Mull',
-    price: 20,
-    desc: 'A striking linocut of a white-tailed eagle soaring over the Hebridean landscape.',
-    specs: [
-      { key: 'Edition',    val: 'Open Edition' },
-      { key: 'Print type', val: 'Linocut' },
-      { key: 'Print size', val: '4 × 4"' }
-    ],
-    images: ['https://lh3.googleusercontent.com/d/17ENkKuOtKhLTACtP4ncK3PwAu_bbXHi-'],
-    maxQty: null, showFraming: true, category: 'print'
-  },
-  'ardalanish': {
-    name: 'Ardalanish',
-    eyebrow: 'Limited Edition · Isle of Mull',
-    price: 120,
-    desc: "A linocut reduction print of Ardalanish Bay — one of Mull's most remote and beautiful beaches.",
-    specs: [
-      { key: 'Edition',    val: 'Limited Edition' },
-      { key: 'Print type', val: 'Linocut Reduction' },
-      { key: 'Print size', val: 'A3 (297 × 420mm)' }
-    ],
-    images: ['https://lh3.googleusercontent.com/d/1-E6cs3aD8RMLg2Q1iQQt3Xox2mMrWVOw'],
-    maxQty: null, showFraming: true, category: 'print'
-  },
-  'lookout-teal': {
-    name: 'Lookout — Teal',
-    eyebrow: 'Open Edition · Isle of Mull',
-    price: 20,
-    desc: 'A small linocut print with a distinctive teal palette — perfect for any Mull lover.',
-    specs: [
-      { key: 'Edition',    val: 'Open Edition' },
-      { key: 'Print type', val: 'Linocut' },
-      { key: 'Print size', val: '4 × 4"' }
-    ],
-    images: ['https://lh3.googleusercontent.com/d/1Kz9YRAs7oDYcJhpCX7xbNa9rVEVkR_77'],
-    maxQty: null, showFraming: true, category: 'print'
-  },
-  'staffa-colour': {
-    name: 'Staffa — Colour',
-    eyebrow: 'Open Edition · Isle of Mull',
-    price: 20,
-    desc: "A vibrant linocut print of the iconic basalt columns of Staffa, home to Fingal's Cave.",
-    specs: [
-      { key: 'Edition',    val: 'Open Edition' },
-      { key: 'Print type', val: 'Linocut' },
-      { key: 'Print size', val: '4 × 4"' }
-    ],
-    images: ['https://lh3.googleusercontent.com/d/1n-ATCREaPrJxsJg5e5Lq03Yupk0YDWVj'],
-    maxQty: null, showFraming: true, category: 'print'
-  },
-  'highland-coo-colour': {
-    name: 'Highland Coo — Colour',
-    eyebrow: 'Open Edition · Isle of Mull',
-    price: 20,
-    desc: 'A joyful coloured linocut of a Highland cow — the unofficial mascot of the Scottish Highlands.',
-    specs: [
-      { key: 'Edition',    val: 'Open Edition' },
-      { key: 'Print type', val: 'Linocut' },
-      { key: 'Print size', val: '4 × 4"' }
-    ],
-    images: ['https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ'],
+    images: ['images/windswept.jpg'],
     maxQty: null, showFraming: true, category: 'print'
   },
   'card-sunset-puffins': {
