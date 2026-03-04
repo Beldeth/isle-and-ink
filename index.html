@@ -881,6 +881,56 @@ footer {
 .c-staffa { background: linear-gradient(180deg, #5a8090 0%, #3a6070 40%, #7a9888 75%); }
 .c-tobermory { background: linear-gradient(170deg, #e87028 0%, #c05018 50%, #402020 100%); }
 
+/* ─── ADMIN ──────────────────────────────────────────────────────────────────── */
+.admin-footer-link { font-size:0.72rem; color:var(--ink); opacity:0.2; text-decoration:none; transition:opacity 0.2s; }
+.admin-footer-link:hover { opacity:0.55; }
+
+.admin-login-wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; background:var(--cream); }
+.admin-login-card { background:white; border-radius:1.5rem; padding:3rem; width:100%; max-width:400px; text-align:center; box-shadow:0 20px 60px rgba(26,39,68,0.1); }
+.admin-login-title { font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--ink); margin-bottom:0.25rem; }
+.admin-login-sub { font-size:0.85rem; color:var(--ink); opacity:0.45; margin-bottom:2rem; }
+.admin-back-link { display:block; margin-top:1.5rem; font-size:0.82rem; color:var(--teal); text-decoration:none; opacity:0.7; }
+.admin-back-link:hover { opacity:1; }
+
+.admin-wrap { min-height:100vh; background:var(--warm-white); }
+.admin-topbar { background:var(--ink); padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:50; }
+.admin-topbar-brand { color:white; font-family:'Playfair Display',serif; font-size:1.1rem; letter-spacing:0.03em; }
+.admin-topbar-actions { display:flex; gap:0.75rem; }
+.admin-content { max-width:900px; margin:0 auto; padding:2.5rem 2rem; }
+.admin-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:2rem; }
+.admin-h1 { font-family:'Playfair Display',serif; font-size:2rem; color:var(--ink); }
+.admin-section { margin-bottom:3rem; }
+.admin-section-title { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--ink); margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid rgba(26,39,68,0.1); }
+.admin-list { display:flex; flex-direction:column; gap:0.5rem; }
+.admin-product-row { display:flex; align-items:center; gap:1rem; background:white; border-radius:0.75rem; padding:1rem; border:1px solid rgba(26,39,68,0.08); }
+.admin-product-thumb { width:56px; height:56px; border-radius:0.5rem; overflow:hidden; flex-shrink:0; }
+.admin-product-thumb img { width:100%; height:100%; object-fit:cover; }
+.admin-product-info { flex:1; min-width:0; }
+.admin-product-name { font-weight:600; color:var(--ink); font-size:0.95rem; }
+.admin-product-meta { font-size:0.8rem; color:var(--ink); opacity:0.5; margin-top:0.2rem; }
+.admin-product-actions { display:flex; gap:0.5rem; flex-shrink:0; }
+.admin-edit-form { background:white; border:1px solid rgba(26,39,68,0.08); border-top:none; border-radius:0 0 0.75rem 0.75rem; padding:1.5rem; margin-top:-0.5rem; }
+.admin-add-form { background:white; border:1px solid rgba(26,39,68,0.12); border-radius:0.75rem; padding:1.5rem; margin-bottom:2rem; }
+.admin-add-title { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--ink); margin-bottom:1.25rem; }
+.admin-form-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.25rem; }
+.admin-label { font-size:0.75rem; font-weight:500; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink); opacity:0.6; display:flex; flex-direction:column; gap:0.4rem; }
+.admin-input { width:100%; padding:0.6rem 0.9rem; border:1.5px solid rgba(26,39,68,0.15); border-radius:0.5rem; font-family:'DM Sans',sans-serif; font-size:0.88rem; color:var(--ink); background:var(--warm-white); outline:none; box-sizing:border-box; transition:border-color 0.2s; }
+.admin-input:focus { border-color:var(--teal); }
+.admin-textarea { min-height:80px; resize:vertical; }
+.admin-form-actions { display:flex; gap:0.75rem; }
+.admin-btn-primary { background:var(--ink); color:white; border:none; border-radius:0.5rem; padding:0.65rem 1.4rem; font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; cursor:pointer; transition:background 0.2s; }
+.admin-btn-primary:hover { background:var(--teal); }
+.admin-btn-ghost { background:transparent; color:var(--ink); border:1.5px solid rgba(26,39,68,0.2); border-radius:0.5rem; padding:0.65rem 1.2rem; font-family:'DM Sans',sans-serif; font-size:0.85rem; cursor:pointer; transition:all 0.2s; }
+.admin-btn-ghost:hover { border-color:var(--ink); }
+.admin-logout { color:rgba(255,255,255,0.7); border-color:rgba(255,255,255,0.25); }
+.admin-logout:hover { color:white; border-color:white; background:transparent; }
+.admin-btn-edit { background:var(--cream); color:var(--ink); border:1.5px solid rgba(26,39,68,0.15); border-radius:0.4rem; padding:0.4rem 0.9rem; font-size:0.8rem; font-family:'DM Sans',sans-serif; cursor:pointer; transition:all 0.2s; }
+.admin-btn-edit:hover { background:var(--teal); color:white; border-color:var(--teal); }
+.admin-btn-delete { background:transparent; color:#c4621a; border:1.5px solid rgba(196,98,26,0.25); border-radius:0.4rem; padding:0.4rem 0.9rem; font-size:0.8rem; font-family:'DM Sans',sans-serif; cursor:pointer; transition:all 0.2s; }
+.admin-btn-delete:hover { background:#c4621a; color:white; border-color:#c4621a; }
+.admin-reset-link { font-size:0.78rem; color:var(--ink); opacity:0.4; text-decoration:underline; cursor:pointer; background:none; border:none; font-family:'DM Sans',sans-serif; }
+.admin-reset-link:hover { opacity:0.8; }
+
 </style>
 </head>
 <body>
@@ -1093,7 +1143,7 @@ footer {
       <div class="footer-col"><h4>About</h4><ul><li><a href="#" onclick="showPage('about')">The Artist</a></li><li><a href="#" onclick="showPage('process')">The Process</a></li><li><a href="#" onclick="showPage('about')">Stockists</a></li><li><a href="#">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Info</h4><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Care Guide</a></li><li><a href="#">FAQ</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p class="footer-copy">© 2025 Isle and Ink · Eden Reeve</p><p class="footer-loc">📍 Pennyghael, Isle of Mull, Scotland</p></div>
+    <div class="footer-bottom"><p class="footer-copy">© 2025 Isle and Ink · Eden Reeve</p><p class="footer-loc">📍 Pennyghael, Isle of Mull, Scotland</p><a href="#" class="admin-footer-link" onclick="showPage('admin-login')">Admin</a></div>
   </footer>
 </div>
 
@@ -1118,61 +1168,14 @@ footer {
 
   <div class="shop-section">
     <h2 class="shop-section-title">Original <em>Prints</em></h2>
-    <div class="shop-grid">
-      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'ardalanish')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/ardalanish.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Ardalanish"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Ardalanish</p><p class="shop-card-sub">Linocut Reduction · Limited Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="ardalanish" data-item-name="Ardalanish" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition · A3" data-item-image="images/ardalanish.jpg">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'afternoon-nap')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/afternoon-nap.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Afternoon Nap"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Afternoon Nap</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="afternoon-nap" data-item-name="Afternoon Nap" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/afternoon-nap.png">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'burrow')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/burrow.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Burrow"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Burrow</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="burrow" data-item-name="Burrow" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/burrow.jpg">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'calgary')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/calgary.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Calgary Bay"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Calgary Bay</p><p class="shop-card-sub">Linocut Reduction · Limited Ed. of 15 · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="calgary" data-item-name="Calgary Bay" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition of 15 · A3" data-item-image="images/calgary.jpg" data-item-max-quantity="15">+</button></div></div>
-      </div>
-      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'hebridean-dreams')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/hebridean-dreams.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;" alt="Hebridean Dreams"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Hebridean Dreams</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="hebridean-dreams" data-item-name="Hebridean Dreams" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/hebridean-dreams.png">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'nestled')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/nestled.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Nestled"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Nestled</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="nestled" data-item-name="Nestled" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/nestled.jpg">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'spring-on-iona')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/spring-on-iona.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Spring on Iona"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Spring on Iona</p><p class="shop-card-sub">Linocut Reduction · Limited Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£120</p><button class="shop-card-add snipcart-add-item" data-item-id="spring-on-iona" data-item-name="Spring on Iona" data-item-price="120" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut Reduction · Limited Edition · A3" data-item-image="images/spring-on-iona.png">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'taking-a-dip')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/taking-a-dip.png" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Taking a Dip"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Taking a Dip</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="taking-a-dip" data-item-name="Taking a Dip" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/taking-a-dip.png">+</button></div></div>
-      </div>
-      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'tangled')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/tangled.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Tangled"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Tangled</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="tangled" data-item-name="Tangled" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/tangled.jpg">+</button></div></div>
-      </div>
-      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'windswept')">
-        <div style="aspect-ratio:1;overflow:hidden;"><img src="images/windswept.jpg" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.08);" alt="Windswept"></div>
-        <div class="shop-card-body"><p class="shop-card-name">Windswept</p><p class="shop-card-sub">Linocut · Open Edition · A3</p><div class="shop-card-footer"><p class="shop-card-price">£48</p><button class="shop-card-add snipcart-add-item" data-item-id="windswept" data-item-name="Windswept" data-item-price="48" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Linocut · Open Edition · A3" data-item-image="images/windswept.jpg">+</button></div></div>
-      </div>
-    </div>
+    <div class="shop-grid" id="shop-prints-grid"></div>
   </div>
 
   <hr class="shop-divider">
 
   <div class="shop-section">
     <h2 class="shop-section-title">Greeting <em>Cards</em></h2>
-    <div class="cards-grid-shop">
-      <div class="shop-card reveal" onclick="if(!event.target.closest('button')) showPage('product', 'card-sunset-puffins')"><img src="https://lh3.googleusercontent.com/d/1YCCJcOjxvlDVJJQ_frjcMPfExsjQD53j" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Sunset Puffins card"><div class="shop-card-body"><p class="shop-card-name">Sunset Puffins</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-sunset-puffins" data-item-name="Sunset Puffins" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1YCCJcOjxvlDVJJQ_frjcMPfExsjQD53j">+</button></div></div></div>
-      <div class="shop-card reveal d1" onclick="if(!event.target.closest('button')) showPage('product', 'card-celebration-puffin')"><img src="https://lh3.googleusercontent.com/d/1z89bnOJXJ2V1ocsGfzz0yoIBqa6uXGyQ" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Celebration Puffin card"><div class="shop-card-body"><p class="shop-card-name">Celebration Puffin</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-celebration-puffin" data-item-name="Celebration Puffin" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1z89bnOJXJ2V1ocsGfzz0yoIBqa6uXGyQ">+</button></div></div></div>
-      <div class="shop-card reveal d2" onclick="if(!event.target.closest('button')) showPage('product', 'card-ardalanish')"><img src="https://lh3.googleusercontent.com/d/1QjBj73OR0259Ur5zyVHAIOh-HLqB4dZu" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Ardalanish card"><div class="shop-card-body"><p class="shop-card-name">Ardalanish</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-ardalanish" data-item-name="Ardalanish (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1QjBj73OR0259Ur5zyVHAIOh-HLqB4dZu">+</button></div></div></div>
-      <div class="shop-card reveal d3" onclick="if(!event.target.closest('button')) showPage('product', 'card-ionas-beach')"><img src="images/iona-beach-card.png" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Iona Beach card"><div class="shop-card-body"><p class="shop-card-name">Iona's Beach</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-ionas-beach" data-item-name="Iona's Beach (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1Yt7KHqep4vVj0Bn_2PEGeYdL8jKCuJFZ">+</button></div></div></div>
-      <div class="shop-card reveal d4" onclick="if(!event.target.closest('button')) showPage('product', 'card-treshnish-puffins')"><img src="https://lh3.googleusercontent.com/d/1cKVgUecvDTsEqPckxBo7uJViRpzHz9hB" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="Puffins card"><div class="shop-card-body"><p class="shop-card-name">Treshnish Puffins</p><p class="shop-card-sub">A6 · Blank inside</p><div class="shop-card-footer"><p class="shop-card-price">£3</p><button class="shop-card-add snipcart-add-item" data-item-id="card-treshnish-puffins" data-item-name="Treshnish Puffins (Card)" data-item-price="3" data-item-url="https://beldeth.github.io/isle-and-ink/" data-item-description="Greeting Card · A6 · Blank inside" data-item-image="https://lh3.googleusercontent.com/d/1cKVgUecvDTsEqPckxBo7uJViRpzHz9hB">+</button></div></div></div>
-    </div>
+    <div class="cards-grid-shop" id="shop-cards-grid"></div>
   </div>
 
   <footer>
@@ -1434,10 +1437,60 @@ footer {
 </div>
 
 <!-- ══════════════════════════════
+     PAGE: ADMIN LOGIN
+══════════════════════════════ -->
+<div class="page" id="page-admin-login">
+  <div class="admin-login-wrap">
+    <div class="admin-login-card">
+      <p style="font-size:2rem;margin-bottom:0.75rem;">🔐</p>
+      <h2 class="admin-login-title">Admin Login</h2>
+      <p class="admin-login-sub">Isle &amp; Ink Dashboard</p>
+      <input id="admin-password-input" type="password" class="admin-input" placeholder="Password" onkeydown="if(event.key==='Enter') adminLogin()" style="margin-bottom:0.5rem;">
+      <p id="admin-login-error" style="color:#c4621a;font-size:0.85rem;margin:0.25rem 0 0.75rem;display:none;">Incorrect password. Try again.</p>
+      <button class="admin-btn-primary" style="width:100%;margin-top:0.5rem;" onclick="adminLogin()">Log In</button>
+      <a href="#" class="admin-back-link" onclick="showPage('home')">← Back to site</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     PAGE: ADMIN DASHBOARD
+══════════════════════════════ -->
+<div class="page" id="page-admin">
+  <div class="admin-wrap">
+    <div class="admin-topbar">
+      <span class="admin-topbar-brand">Isle &amp; Ink · Admin</span>
+      <div class="admin-topbar-actions">
+        <button class="admin-btn-ghost" onclick="showPage('shop')">View Shop</button>
+        <button class="admin-btn-ghost admin-logout" onclick="adminLogout()">Log Out</button>
+      </div>
+    </div>
+    <div class="admin-content">
+      <div class="admin-header">
+        <h1 class="admin-h1">Product Manager</h1>
+        <div style="display:flex;gap:0.75rem;align-items:center;">
+          <button class="admin-reset-link" onclick="adminResetDefaults()">Reset to defaults</button>
+          <button class="admin-btn-primary" onclick="adminToggleAddForm()">+ Add Product</button>
+        </div>
+      </div>
+      <div id="admin-add-form" style="display:none;" class="admin-add-form"></div>
+      <div class="admin-section">
+        <h2 class="admin-section-title">Original Prints</h2>
+        <div id="admin-prints-list" class="admin-list"></div>
+      </div>
+      <div class="admin-section">
+        <h2 class="admin-section-title">Greeting Cards</h2>
+        <div id="admin-cards-list" class="admin-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
      JS
 ══════════════════════════════ -->
 <script>
-// ─── Product catalogue ───────────────────────────────────────────────────────
+// ─── Product catalogue (defaults) ────────────────────────────────────────────
 const PRODUCTS = {
   'ardalanish': {
     name: 'Ardalanish',
@@ -1639,9 +1692,210 @@ const PRODUCTS = {
   }
 };
 
+// ─── Active products (localStorage overrides defaults) ───────────────────────
+let activeProducts = (() => {
+  try {
+    const saved = localStorage.getItem('isle_ink_products');
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return Object.assign({}, PRODUCTS);
+})();
+
+// ─── Render shop grids dynamically ───────────────────────────────────────────
+function renderShop() {
+  const ITEM_URL = 'https://beldeth.github.io/isle-and-ink/';
+  const delays = ['', ' d1', ' d2', ' d3'];
+
+  const prints = Object.entries(activeProducts).filter(([, p]) => p.category === 'print');
+  document.getElementById('shop-prints-grid').innerHTML = prints.map(([id, p], i) => `
+    <div class="shop-card reveal${delays[i % 4]}" onclick="if(!event.target.closest('button')) showPage('product','${id}')">
+      <div style="aspect-ratio:1;overflow:hidden;">
+        <img src="${p.images[0]}" class="shop-card-img" style="width:100%;height:100%;display:block;object-fit:cover;transform:scale(1.05);" alt="${p.name}">
+      </div>
+      <div class="shop-card-body">
+        <p class="shop-card-name">${p.name}</p>
+        <p class="shop-card-sub">${p.eyebrow}</p>
+        <div class="shop-card-footer">
+          <p class="shop-card-price">£${p.price}</p>
+          <button class="shop-card-add snipcart-add-item"
+            data-item-id="${id}" data-item-name="${p.name}" data-item-price="${p.price}"
+            data-item-url="${ITEM_URL}" data-item-description="${p.eyebrow}"
+            data-item-image="${p.images[0]}"
+            ${p.maxQty ? `data-item-max-quantity="${p.maxQty}"` : ''}>+</button>
+        </div>
+      </div>
+    </div>`).join('');
+
+  const cards = Object.entries(activeProducts).filter(([, p]) => p.category === 'card');
+  document.getElementById('shop-cards-grid').innerHTML = cards.map(([id, p], i) => `
+    <div class="shop-card reveal${delays[i % 4]}" onclick="if(!event.target.closest('button')) showPage('product','${id}')">
+      <img src="${p.images[0]}" class="shop-card-img" style="aspect-ratio:3/4;display:block;object-fit:cover;" alt="${p.name}">
+      <div class="shop-card-body">
+        <p class="shop-card-name">${p.name}</p>
+        <p class="shop-card-sub">A6 · Blank inside</p>
+        <div class="shop-card-footer">
+          <p class="shop-card-price">£${p.price}</p>
+          <button class="shop-card-add snipcart-add-item"
+            data-item-id="${id}" data-item-name="${p.name}" data-item-price="${p.price}"
+            data-item-url="${ITEM_URL}" data-item-description="Greeting Card · A6 · Blank inside"
+            data-item-image="${p.images[0]}">+</button>
+        </div>
+      </div>
+    </div>`).join('');
+
+  setTimeout(() => observeReveals(), 100);
+}
+
+// ─── Admin ────────────────────────────────────────────────────────────────────
+const ADMIN_PASS = 'InkyChicken';
+
+function adminLogin() {
+  const input = document.getElementById('admin-password-input');
+  const errEl = document.getElementById('admin-login-error');
+  if (input.value === ADMIN_PASS) {
+    sessionStorage.setItem('isle_ink_admin', '1');
+    input.value = '';
+    errEl.style.display = 'none';
+    renderAdminDashboard();
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-admin').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    errEl.style.display = 'block';
+    input.value = '';
+    input.focus();
+  }
+}
+
+function adminLogout() {
+  sessionStorage.removeItem('isle_ink_admin');
+  showPage('home');
+}
+
+function saveAdminProducts() {
+  localStorage.setItem('isle_ink_products', JSON.stringify(activeProducts));
+  renderShop();
+}
+
+function adminResetDefaults() {
+  if (!confirm('Reset all products back to the original defaults? Any changes you\'ve made will be lost.')) return;
+  localStorage.removeItem('isle_ink_products');
+  activeProducts = Object.assign({}, PRODUCTS);
+  renderShop();
+  renderAdminDashboard();
+  alert('Products reset to defaults.');
+}
+
+function renderAdminDashboard() {
+  const prints = Object.entries(activeProducts).filter(([, p]) => p.category === 'print');
+  const cards  = Object.entries(activeProducts).filter(([, p]) => p.category === 'card');
+  document.getElementById('admin-prints-list').innerHTML = prints.map(([id, p]) => adminProductRow(id, p)).join('');
+  document.getElementById('admin-cards-list').innerHTML  = cards.map(([id, p])  => adminProductRow(id, p)).join('');
+}
+
+function adminProductRow(id, p) {
+  const esc = s => String(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  return `
+    <div class="admin-product-row" id="admin-row-${id}">
+      <div class="admin-product-thumb"><img src="${p.images[0]}" alt="${p.name}"></div>
+      <div class="admin-product-info">
+        <p class="admin-product-name">${p.name}</p>
+        <p class="admin-product-meta">£${p.price} · ${p.eyebrow}</p>
+      </div>
+      <div class="admin-product-actions">
+        <button class="admin-btn-edit" onclick="adminShowEditForm('${id}')">Edit</button>
+        <button class="admin-btn-delete" onclick="adminDeleteProduct('${id}')">Delete</button>
+      </div>
+    </div>
+    <div class="admin-edit-form" id="admin-edit-${id}" style="display:none;">
+      <div class="admin-form-grid">
+        <label class="admin-label">Name<input class="admin-input" id="edit-name-${id}" value="${esc(p.name)}"></label>
+        <label class="admin-label">Price (£)<input class="admin-input" type="number" id="edit-price-${id}" value="${p.price}" min="0" step="0.01"></label>
+        <label class="admin-label" style="grid-column:1/-1;">Edition / Sub-text<input class="admin-input" id="edit-eyebrow-${id}" value="${esc(p.eyebrow)}"></label>
+        <label class="admin-label" style="grid-column:1/-1;">Description<textarea class="admin-input admin-textarea" id="edit-desc-${id}">${esc(p.desc)}</textarea></label>
+        <label class="admin-label" style="grid-column:1/-1;">Image (URL or path)<input class="admin-input" id="edit-image-${id}" value="${esc(p.images[0])}"></label>
+      </div>
+      <div class="admin-form-actions">
+        <button class="admin-btn-primary" onclick="adminSaveProduct('${id}')">Save Changes</button>
+        <button class="admin-btn-ghost" onclick="document.getElementById('admin-edit-${id}').style.display='none'">Cancel</button>
+      </div>
+    </div>`;
+}
+
+function adminShowEditForm(id) {
+  document.querySelectorAll('.admin-edit-form').forEach(f => f.style.display = 'none');
+  document.getElementById('admin-edit-' + id).style.display = 'block';
+}
+
+function adminSaveProduct(id) {
+  const name    = document.getElementById('edit-name-'   + id).value.trim();
+  const price   = parseFloat(document.getElementById('edit-price-'  + id).value);
+  const eyebrow = document.getElementById('edit-eyebrow-'+ id).value.trim();
+  const desc    = document.getElementById('edit-desc-'   + id).value.trim();
+  const image   = document.getElementById('edit-image-'  + id).value.trim();
+  if (!name || isNaN(price)) { alert('Name and Price are required.'); return; }
+  activeProducts[id] = { ...activeProducts[id], name, price, eyebrow, desc,
+    images: [image, ...activeProducts[id].images.slice(1)] };
+  saveAdminProducts();
+  renderAdminDashboard();
+}
+
+function adminDeleteProduct(id) {
+  if (!confirm(`Delete "${activeProducts[id].name}"? This can be undone with Reset to defaults.`)) return;
+  delete activeProducts[id];
+  saveAdminProducts();
+  renderAdminDashboard();
+}
+
+function adminToggleAddForm() {
+  const formEl = document.getElementById('admin-add-form');
+  if (formEl.style.display !== 'none') { formEl.style.display = 'none'; return; }
+  formEl.style.display = 'block';
+  formEl.innerHTML = `
+    <h3 class="admin-add-title">Add New Product</h3>
+    <div class="admin-form-grid">
+      <label class="admin-label">Name<input class="admin-input" id="new-name" placeholder="e.g. Mull Otter"></label>
+      <label class="admin-label">Price (£)<input class="admin-input" type="number" id="new-price" placeholder="48" min="0" step="0.01"></label>
+      <label class="admin-label">Category
+        <select class="admin-input" id="new-category">
+          <option value="print">Original Print</option>
+          <option value="card">Greeting Card</option>
+        </select>
+      </label>
+      <label class="admin-label">Edition / Sub-text<input class="admin-input" id="new-eyebrow" placeholder="Open Edition · Isle of Mull"></label>
+      <label class="admin-label" style="grid-column:1/-1;">Description<textarea class="admin-input admin-textarea" id="new-desc" placeholder="A beautiful linocut print..."></textarea></label>
+      <label class="admin-label" style="grid-column:1/-1;">Image (URL or local path e.g. images/my-print.jpg)<input class="admin-input" id="new-image" placeholder="images/my-print.jpg"></label>
+    </div>
+    <div class="admin-form-actions">
+      <button class="admin-btn-primary" onclick="adminAddProduct()">Add to Shop</button>
+      <button class="admin-btn-ghost" onclick="document.getElementById('admin-add-form').style.display='none'">Cancel</button>
+    </div>`;
+}
+
+function adminAddProduct() {
+  const name     = document.getElementById('new-name').value.trim();
+  const price    = parseFloat(document.getElementById('new-price').value);
+  const category = document.getElementById('new-category').value;
+  const eyebrow  = document.getElementById('new-eyebrow').value.trim();
+  const desc     = document.getElementById('new-desc').value.trim();
+  const image    = document.getElementById('new-image').value.trim();
+  if (!name || isNaN(price) || !image) { alert('Name, Price and Image are required.'); return; }
+  const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  if (activeProducts[id]) { alert('A product with that name already exists.'); return; }
+  activeProducts[id] = {
+    name, price,
+    eyebrow: eyebrow || (category === 'print' ? 'Open Edition · Isle of Mull' : 'Greeting Card · Isle of Mull'),
+    desc, specs: [], images: [image], maxQty: null,
+    showFraming: category === 'print', category
+  };
+  saveAdminProducts();
+  renderAdminDashboard();
+  document.getElementById('admin-add-form').style.display = 'none';
+}
+
 // ─── Load a product into the detail page ─────────────────────────────────────
 function loadProduct(id) {
-  const p = PRODUCTS[id];
+  const p = activeProducts[id];
   if (!p) return;
 
   document.querySelector('.product-breadcrumb').innerHTML =
@@ -1769,7 +2023,8 @@ document.querySelectorAll('.qty-btn').forEach(btn => {
   });
 });
 
-// Initial reveals
+// Initial shop render + reveals
+renderShop();
 observeReveals();
 </script>
 <div hidden id="snipcart"
