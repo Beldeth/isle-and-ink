@@ -1469,7 +1469,9 @@ footer {
     <div class="admin-topbar">
       <span class="admin-topbar-brand">Isle &amp; Ink · Admin</span>
       <div class="admin-topbar-actions">
-        <button class="admin-btn-ghost" onclick="showPage('shop')">View Shop</button>
+        <span id="admin-unsaved-badge" style="display:none;color:#f5c842;font-size:0.78rem;letter-spacing:0.06em;align-self:center;margin-right:0.5rem;">● Unsaved changes</span>
+        <button class="admin-btn-ghost" onclick="adminDiscardChanges()">Discard Changes</button>
+        <button class="admin-btn-primary" onclick="adminCommitChanges()">Save &amp; Exit</button>
         <button class="admin-btn-ghost admin-logout" onclick="adminLogout()">Log Out</button>
       </div>
     </div>
@@ -1709,6 +1711,9 @@ let activeProducts = (() => {
   return Object.assign({}, PRODUCTS);
 })();
 
+// Staging copy — all admin edits go here; only committed on Save & Exit
+let adminDraftProducts = {};
+
 // ─── Render shop grids dynamically ───────────────────────────────────────────
 function renderShop() {
   const ITEM_URL = 'https://beldeth.github.io/isle-and-ink/';
@@ -1764,6 +1769,9 @@ function adminLogin() {
     sessionStorage.setItem('isle_ink_admin', '1');
     input.value = '';
     errEl.style.display = 'none';
+    // Fresh draft on each login
+    adminDraftProducts = JSON.parse(JSON.stringify(activeProducts));
+    adminMarkUnsaved(false);
     renderAdminDashboard();
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-admin').classList.add('active');
@@ -1776,7 +1784,12 @@ function adminLogin() {
 }
 
 function adminLogout() {
+  const badge = document.getElementById('admin-unsaved-badge');
+  if (badge && badge.style.display !== 'none') {
+    if (!confirm('You have unsaved changes. Log out anyway? Your changes will be lost.')) return;
+  }
   sessionStorage.removeItem('isle_ink_admin');
+  adminDraftProducts = {};
   showPage('home');
 }
 
@@ -1788,15 +1801,39 @@ function saveAdminProducts() {
 function adminResetDefaults() {
   if (!confirm('Reset all products back to the original defaults? Any changes you\'ve made will be lost.')) return;
   localStorage.removeItem('isle_ink_products');
-  activeProducts = Object.assign({}, PRODUCTS);
+  activeProducts = JSON.parse(JSON.stringify(PRODUCTS));
+  adminDraftProducts = JSON.parse(JSON.stringify(PRODUCTS));
   renderShop();
+  adminMarkUnsaved(false);
   renderAdminDashboard();
   alert('Products reset to defaults.');
 }
 
+function adminMarkUnsaved(dirty) {
+  const badge = document.getElementById('admin-unsaved-badge');
+  if (badge) badge.style.display = dirty ? 'inline' : 'none';
+}
+
+function adminCommitChanges() {
+  activeProducts = JSON.parse(JSON.stringify(adminDraftProducts));
+  localStorage.setItem('isle_ink_products', JSON.stringify(activeProducts));
+  renderShop();
+  adminMarkUnsaved(false);
+  sessionStorage.removeItem('isle_ink_admin');
+  adminDraftProducts = {};
+  showPage('shop');
+}
+
+function adminDiscardChanges() {
+  if (!confirm('Discard all unsaved changes and revert to last saved state?')) return;
+  adminDraftProducts = JSON.parse(JSON.stringify(activeProducts));
+  adminMarkUnsaved(false);
+  renderAdminDashboard();
+}
+
 function renderAdminDashboard() {
-  const prints = Object.entries(activeProducts).filter(([, p]) => p.category === 'print');
-  const cards  = Object.entries(activeProducts).filter(([, p]) => p.category === 'card');
+  const prints = Object.entries(adminDraftProducts).filter(([, p]) => p.category === 'print');
+  const cards  = Object.entries(adminDraftProducts).filter(([, p]) => p.category === 'card');
   document.getElementById('admin-prints-list').innerHTML = prints.map(([id, p]) => adminProductRow(id, p)).join('');
   document.getElementById('admin-cards-list').innerHTML  = cards.map(([id, p])  => adminProductRow(id, p)).join('');
 }
@@ -1846,16 +1883,16 @@ function adminSaveProduct(id) {
   const img1    = document.getElementById('edit-image1-'  + id).value.trim();
   const img2    = document.getElementById('edit-image2-'  + id).value.trim();
   if (!name || isNaN(price)) { alert('Name and Price are required.'); return; }
-  activeProducts[id] = { ...activeProducts[id], name, price, eyebrow, desc,
+  adminDraftProducts[id] = { ...adminDraftProducts[id], name, price, eyebrow, desc,
     images: [img0, img1, img2].filter((v, i) => i === 0 || v) };
-  saveAdminProducts();
+  adminMarkUnsaved(true);
   renderAdminDashboard();
 }
 
 function adminDeleteProduct(id) {
-  if (!confirm(`Delete "${activeProducts[id].name}"? This can be undone with Reset to defaults.`)) return;
-  delete activeProducts[id];
-  saveAdminProducts();
+  if (!confirm(`Delete "${adminDraftProducts[id].name}"? This can be undone with Discard Changes or Reset to defaults.`)) return;
+  delete adminDraftProducts[id];
+  adminMarkUnsaved(true);
   renderAdminDashboard();
 }
 
@@ -1897,15 +1934,15 @@ function adminAddProduct() {
   const img2     = document.getElementById('new-image2').value.trim();
   if (!name || isNaN(price) || !img0) { alert('Name, Price and Main Image are required.'); return; }
   const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  if (activeProducts[id]) { alert('A product with that name already exists.'); return; }
+  if (adminDraftProducts[id]) { alert('A product with that name already exists.'); return; }
   const images = [img0, img1, img2].filter((v, i) => i === 0 || v);
-  activeProducts[id] = {
+  adminDraftProducts[id] = {
     name, price,
     eyebrow: eyebrow || (category === 'print' ? 'Open Edition · Isle of Mull' : 'Greeting Card · Isle of Mull'),
     desc, specs: [], images, maxQty: null,
     showFraming: category === 'print', category
   };
-  saveAdminProducts();
+  adminMarkUnsaved(true);
   renderAdminDashboard();
   document.getElementById('admin-add-form').style.display = 'none';
 }
@@ -1931,11 +1968,17 @@ function loadProduct(id) {
     </svg>
     <span>Add image</span>
   </div>`;
+  const hero = p.images[0];
   const alt1 = p.images[1] || '';
   const alt2 = p.images[2] || '';
+  const mkThumb = (src, active) =>
+    `<img src="${src}" class="product-thumb${active ? ' active' : ''}"
+      style="width:72px;height:72px;border-radius:.5rem;object-fit:cover;cursor:pointer;border:2px solid ${active ? 'var(--teal)' : 'transparent'};"
+      alt="${p.name}" onclick="selectThumb(this,'${src}')">`;
   thumbsEl.innerHTML =
-    (alt1 ? `<img src="${alt1}" class="product-thumb" style="width:72px;height:72px;border-radius:.5rem;object-fit:cover;cursor:pointer;border:2px solid transparent;" alt="${p.name} alt 1" onclick="selectThumb(this,'${alt1}')">` : emptyThumb) +
-    (alt2 ? `<img src="${alt2}" class="product-thumb" style="width:72px;height:72px;border-radius:.5rem;object-fit:cover;cursor:pointer;border:2px solid transparent;" alt="${p.name} alt 2" onclick="selectThumb(this,'${alt2}')">` : emptyThumb);
+    mkThumb(hero, true) +
+    (alt1 ? mkThumb(alt1, false) : emptyThumb) +
+    (alt2 ? mkThumb(alt2, false) : emptyThumb);
   thumbsEl.style.display = 'flex';
 
   document.querySelector('.product-eyebrow').textContent = p.eyebrow;
