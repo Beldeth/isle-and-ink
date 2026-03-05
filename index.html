@@ -939,6 +939,153 @@ footer {
 .admin-reset-link { font-size:0.78rem; color:var(--ink); opacity:0.4; text-decoration:underline; cursor:pointer; background:none; border:none; font-family:'DM Sans',sans-serif; }
 .admin-reset-link:hover { opacity:0.8; }
 
+/* ─── Hamburger (hidden on desktop) ─────────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  order: 3;
+  align-self: center;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤768px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Nav ── */
+  nav { padding: 0.9rem 1.25rem; flex-wrap: wrap; }
+  .nav-links {
+    display: none; order: 4; width: 100%;
+    flex-direction: column; gap: 0; list-style: none;
+    padding: 0.5rem 0; margin-top: 0.5rem;
+    border-top: 1px solid rgba(26,39,68,0.12);
+  }
+  .nav-links.mobile-open { display: flex; }
+  .nav-links a { padding: 0.8rem 0; font-size: 0.88rem; border-bottom: 1px solid rgba(26,39,68,0.07); opacity: 0.7; }
+  .nav-logo { position: static; transform: none; order: 1; flex: 1; }
+  .nav-right { order: 2; gap: 0.8rem; }
+  .nav-ig { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* ── Hero ── */
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 2.5rem 1.5rem 2rem; }
+  .hero-right { min-height: 56vw; }
+  .hero-float-card { width: 160px; bottom: 1rem; left: 1rem; }
+
+  /* ── Eden Section ── */
+  .eden-section { grid-template-columns: 1fr; min-height: unset; }
+  .eden-img { min-height: 55vw; }
+  .eden-content { padding: 2.5rem 1.5rem; }
+
+  /* ── Featured Prints Grid (homepage) ── */
+  .prints-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .print-card.tall { grid-row: auto; }
+  .print-thumb.tall { min-height: auto; }
+  .featured-prints { padding: 3rem 1.5rem; }
+
+  /* ── Steps 4-col → 2-col ── */
+  .process-dark { padding: 3rem 1.5rem; }
+  .steps-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  /* ── Reviews 3-col → 1-col ── */
+  .reviews-section { padding: 3rem 1.5rem; }
+  .reviews-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .rating-row { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .rating-num { font-size: 2.5rem; }
+
+  /* ── Cards Band ── */
+  .cards-band { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
+
+  /* ── Email Section ── */
+  .email-section { padding: 3rem 1.5rem; }
+  .email-section::before { font-size: 4.5rem; }
+  .email-form { flex-direction: column; padding: 0; background: none; border-radius: 0; gap: 0.75rem; box-shadow: none; }
+  .email-form input { border-radius: 0.6rem; padding: 0.85rem 1.1rem; border: 1.5px solid rgba(26,39,68,0.2); }
+  .email-form button { border-radius: 0.6rem; padding: 0.85rem 1.4rem; width: 100%; }
+  .email-perks { gap: 1rem; justify-content: center; }
+
+  /* ── Shop Page ── */
+  .shop-hero { padding: 3rem 1.5rem 2.5rem; }
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid-shop { grid-template-columns: repeat(3, 1fr); }
+  .shop-section { padding: 2.5rem 1.5rem; }
+  .shop-filters { flex-wrap: wrap; }
+
+  /* ── Product Page ── */
+  .product-wrap { padding: 1.5rem; }
+  .product-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .product-images { position: static; top: auto; }
+  .product-main-img { min-height: unset; }
+  .product-title { font-size: 2rem; }
+  .product-cta-row { flex-direction: column; }
+  .product-reviews { padding: 2.5rem 1.5rem; }
+  .reviews-grid { max-width: none; }
+
+  /* ── About Page ── */
+  .about-hero { grid-template-columns: 1fr; min-height: unset; }
+  .about-hero-img { min-height: 55vw; }
+  .about-hero-content { padding: 2.5rem 1.5rem; }
+  .about-values { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+  .about-mull { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+  .stockists-list { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stockists-section { padding: 3rem 1.5rem; }
+
+  /* ── Process Page ── */
+  .process-hero-full { grid-template-columns: 1fr; min-height: unset; gap: 2rem; padding: 2.5rem 1.5rem; }
+  .process-step-row { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 3rem; padding: 0 1.5rem; }
+  .process-step-row.flip { direction: ltr; }
+  .step-big-num { font-size: 3rem; }
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
+  .process-tools { padding: 3rem 1.5rem; }
+
+  /* ── Footer ── */
+  footer { padding: 2.5rem 1.5rem 1.5rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE — PHONE (≤480px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  nav { padding: 0.75rem 1rem; }
+
+  /* Featured prints: 2-col → 1-col on small phones */
+  .prints-grid { grid-template-columns: 1fr; }
+
+  /* Steps: 2-col → 1-col */
+  .steps-grid { grid-template-columns: 1fr; }
+
+  /* Cards grid: 3-col → 2-col */
+  .cards-grid-shop { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer: 2-col → 1-col */
+  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Product */
+  .product-title { font-size: 1.7rem; }
+
+  /* Tools */
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Hero float card */
+  .hero-float-card { width: 140px; font-size: 0.78rem; }
+}
+
 </style>
 </head>
 <body>
@@ -957,9 +1104,12 @@ footer {
     <img src="https://lh3.googleusercontent.com/d/1hkCqOGYH9Ga9VGijT0NIDLqm2ryPJvJq" style="height:36px;width:auto;" alt="Isle and Ink logo">
   </a>
   <div class="nav-right">
-    <a href="#">Instagram</a>
+    <a class="nav-ig" href="#">Instagram</a>
     <button class="snipcart-checkout nav-cart">Basket (<span class="snipcart-items-count">0</span>)</button>
   </div>
+  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ══════════════════════════════
@@ -2023,7 +2173,13 @@ function selectThumb(thumbEl, src) {
   thumbEl.style.border = '2px solid var(--teal)';
 }
 
+function toggleMobileNav() {
+  document.querySelector('.nav-links').classList.toggle('mobile-open');
+}
+
 function showPage(id, productId) {
+  // Close mobile nav if open
+  document.querySelector('.nav-links')?.classList.remove('mobile-open');
   // Hide all pages
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
